@@ -1,0 +1,10 @@
+<suite name="Amazon Test Suite">
+	<test name="Amazon App Test">
+		<classes>
+			<class name="com.amazon.qa.testcases.HomePageTest"></class>
+			<class name="com.amazon.qa.testcases.WomenShoesTest"></class>
+			<class name="com.amazon.qa.testcases.WomenFashionSandlesTest"></class>
+			<class name="com.amazon.qa.testcases.WomenEthnicFootwearTest"></class>
+		</classes>
+	</test>
+</suite>
