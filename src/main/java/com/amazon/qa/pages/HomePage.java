@@ -2,6 +2,7 @@ package com.amazon.qa.pages;
 
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,6 +11,7 @@ import com.amazon.qa.base.BaseClass;
 public class HomePage extends BaseClass{
 	
 	@FindBy(xpath="//a[@id=\"nav-hamburger-menu\"]")
+	@CacheLookup
 	WebElement menuButton;
 	
 	@FindBy(xpath = "//a[@data-menu-id=\"10\"]")

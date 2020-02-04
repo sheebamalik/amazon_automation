@@ -6,9 +6,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.amazon.qa.util.TestUtils;
+import com.amazon.qa.util.WebEventListener;
 
 public class BaseClass {
 	
@@ -16,6 +18,8 @@ public class BaseClass {
 	public static Properties prop = new Properties();
 	public static InputStream is;
 	public static WebDriverWait wait;
+	public static EventFiringWebDriver e_driver;
+	public static WebEventListener eventlistener;
 	
 	public BaseClass() throws FileNotFoundException{
 		try {
@@ -28,6 +32,10 @@ public class BaseClass {
 		}
 		System.out.println("1");
 		
+		e_driver = new EventFiringWebDriver(driver);
+		eventlistener = new WebEventListener();
+		e_driver.register(eventlistener);
+		driver = e_driver;
 	}
 	
 	public void OpenBrowser() {
