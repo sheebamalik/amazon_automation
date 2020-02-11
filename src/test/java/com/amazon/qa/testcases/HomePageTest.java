@@ -13,19 +13,20 @@ import com.amazon.qa.pages.WomenShoes;
 public class HomePageTest extends BaseClass{
 	
 	WomenShoes womenShoes;
+	HomePage homepage;
 	
 	HomePageTest() throws FileNotFoundException{
 		super();
 	}
 	
 	@BeforeMethod
-	public void setup () {
+	public void setup () throws FileNotFoundException {
 		OpenBrowser();
 		}
 	
 	@Test
 	public void SearchWomenFashionTest() throws Exception {
-		HomePage homepage = new HomePage();
+		homepage = new HomePage();
 		womenShoes = homepage.categorySelect();
 		}
 	

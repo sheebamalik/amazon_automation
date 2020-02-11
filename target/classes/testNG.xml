@@ -1,4 +1,8 @@
 <suite name="Amazon Test Suite">
+	<listeners>
+		<listener class-name="com.amazon.extentReportListener.ExtentReporterNG"/>
+	</listeners>
+
 	<test name="Amazon App Test">
 		<classes>
 			<class name="com.amazon.qa.testcases.HomePageTest"></class>

@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amazon.qa.testcases.WomenShoesTest">
+      <class name="com.amazon.qa.testcases.HomePageTest">
         <methods>
           <include name="setup"/>
-          <include name="openEthnicSandals"/>
+          <include name="SearchWomenFashionTest"/>
+          <include name="tearoff"/>
         </methods>
-      </class> <!-- com.amazon.qa.testcases.WomenShoesTest -->
+      </class> <!-- com.amazon.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
